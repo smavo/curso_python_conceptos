@@ -1,16 +1,22 @@
 
 # Variables:
 ## Es un elemento de un lenguaje de programación que tiene asignado un valor determinado.
-
 ## Las variables en Python se pueden crear asignando un valor a un nombre sin necesidad de declararla antes.
 
 x = 10
 y = "Nombre"
 z = 3.9
 
+### Las variables permiten _almacenar datos del programa_. 
+# Estas serán de un tipo u otro en función de la información que se guarde en ellas.*
+
 
 ### Nombres de variables
-### Podemos asignar el nombre que queramos, respetando no usar las palabras reservadas de Python ni espacios, guiones o números al principio.
+# El nombre de una variable se conoce como 'identificador', y deberá cumplir las siguientes reglas:
+# - Comenzar con una letra o un guión bajo.
+# - El resto del nombre estará formado por letras, números o guiones bajos.
+# - Los nombres de las variables son *case sensitive*, es decir, no es lo mismo que una variable se llame `resultado` que `RESULTADO`.
+# - Existen una serie de palabras reservadas que no se pueden utilizar (def, global, return, if, for, ...).
 
 # Válido
 _variable = 10
