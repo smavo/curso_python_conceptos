@@ -9,13 +9,14 @@ print(z,x,y)
 a,b,c = 3.14, -0.5, 2.0
 print(a,b,c)
 
+
 # Cadenas de texto (str): Se utilizan para almacenar texto. Puedes definirlas usando comillas simples o dobles. Por ejemplo: 
 message = "Hola, mundo"
 print(message)
 
+
 # Booleanos (bool): Representan valores de verdad, es decir, True (verdadero) o False (falso). 
 # Se utilizan en expresiones lógicas y de control de flujo.
-
 valor_1 = True
 valor_2 = False
 
