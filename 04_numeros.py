@@ -28,14 +28,11 @@ no como tipo int le añadimos detrás una letra “L” de este modo:
 
 # Definir un número entero largo
 numero_largo = 1234567890123456789012345678901234567890
-
 resultado = numero_largo * 2
-
 print(resultado)
 
 # Otras formas de expresar numeros largos
 number = 2e10
-
 print(number)
 
 
@@ -52,9 +49,7 @@ El máximo número que permite este tipo es 1.7976931348623157e+308, y
 el mínimo 2.2250738585072014e-308. En Python los decimales se separan con un
 punto ().
 """
-
 decimal_number = 10.5
-
 print(decimal_number)
 
 
