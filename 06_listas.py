@@ -64,3 +64,29 @@ print(autos)
 print(f"El auto eliminado por el metodo remove es: '{auto_remove.title()}'")
 
 
+# Organizar Listas:
+motos = ['susuki','kawasaki','honda','pulsar']
+motos.sort() # Ordena en orden alfabetico
+print(motos) 
+
+motos.sort(reverse=True) # Ordena en orden alfabetico inverso
+print(motos)
+
+
+motos_list1 = sorted(motos) # sorted devuelve la lista a su orden original
+motos_list2 = sorted(motos, reverse=True) # Devuelve la lista en orden inverso
+print(motos_list1)
+print(motos_list2)
+
+
+# Orden inverso
+motos.reverse()
+print(motos)
+
+
+# Longitud en una Lista
+frutas = ['manzana', 'pera', 'piña', 'fresa', 'naranja']
+print(frutas)
+print(len(frutas))
+
+
