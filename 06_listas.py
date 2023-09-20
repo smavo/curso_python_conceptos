@@ -90,3 +90,36 @@ print(frutas)
 print(len(frutas))
 
 
+# Trabajando con el Bucle For en una lista
+nombres = ['yadira', 'yanela', 'isela', 'aurea', 'graciela']
+print(nombres)
+
+for nombre in nombres:
+    print(f'El nombre es: {nombre.title()}, y tiene  {len(nombre)} caracteres')
+
+
+# Listas Numéricas
+numero_listas = [ 1,2,3,4,5,6,7,8,9,0]
+print(numero_listas)
+
+for valor in range(1,6): # Tiene un rango de 0 al 5
+    print(valor)
+
+for val in range(2,9,2): # Comienza en el valor 2 y luego suma 2 a ese valor
+    print(val)
+
+for vall in range(0,9):
+    print(vall**2) # calcula el exponente de un numero recorriendo el bucle For
+
+
+# Estadistica simple con una lista de numeros
+numero_listas1 = [ 1,2,3,4,5,6,7,8,9,10,11,12]
+
+print(min(numero_listas1)) # Obtiene el numero minimo
+print(max(numero_listas1)) # Obtiene el numero maximo
+print(sum(numero_listas1)) # Obtiene la suma total de todos los numeros de la lista
+
+
+# Lista de compresiones
+calculos = [valores**2 for valores in range(0,11)]
+print(calculos)
