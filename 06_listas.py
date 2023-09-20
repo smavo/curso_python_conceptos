@@ -123,3 +123,33 @@ print(sum(numero_listas1)) # Obtiene la suma total de todos los numeros de la li
 # Lista de compresiones
 calculos = [valores**2 for valores in range(0,11)]
 print(calculos)
+
+
+# Trabajando con una parte de la lista
+vegetales = ['zanahoria', 'ajos', 'papa', 'tomate', 'apio', 'coliflor', 'alcachofa', 'cebolla']
+print(vegetales[:2])
+print(vegetales[0:3])
+print(vegetales[2:4])
+print(vegetales[5:])
+print(vegetales[-2:])
+
+for vegetal in vegetales[:3]:
+    print(f'Vegetal primero: {vegetal}')
+
+for vegetal in vegetales[5:]:
+    print(f'Vegetal ultimo: {vegetal}')
+
+
+# Copiar una lista
+numeros_pares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros = numeros_pares[:]
+print(numeros_pares)
+print(numeros)
+
+numeros_pares.append('12')
+numeros.append('20')
+print(numeros_pares)
+print(numeros)
+
+numeros_ppares = numeros_pares
+print(numeros_ppares)
