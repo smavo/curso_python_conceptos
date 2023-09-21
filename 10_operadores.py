@@ -132,7 +132,8 @@ print(no_esta_en_lista)
 
 
 # Operadores de identidad: Se 
-# utilizan para verificar si dos objetos tienen la misma identidad (es decir, si son el mismo objeto en la memoria).
+# utilizan para verificar si dos objetos tienen la misma identidad 
+# (es decir, si son el mismo objeto en la memoria).
 """
 is (es)
 is not (no es)
@@ -145,3 +146,4 @@ no_es_el_mismo_objeto = a is not [1, 2, 3]  # True, ya que son dos objetos difer
 
 print(es_el_mismo_objeto)
 print(no_es_el_mismo_objeto)
+
