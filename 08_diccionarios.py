@@ -53,14 +53,12 @@ print(estudiante)
 # La forma más habitual de recorrer un diccionario es mediante 
 # la sentencia `for`. Al recorrer un diccionario, por defecto se 
 # iterará sobre sus claves:
-
 diccionario1 =  {'a':1,  'b':2,  'c':3}
 for key in diccionario1:
 	print(key) # Resultado: a b c
 
 
 # Es decir, el código anterior será equivalente al siguiente:
-
 diccionario2 =  {1:'a',  2:'b',  3:'c', 4:'d'}
 for key in diccionario2.keys():
 	print(key) # Resultado: 1 2 3 4
