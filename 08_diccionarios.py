@@ -170,3 +170,40 @@ print(edades2)
 # Un diccionario nunca debería contener dos claves iguales. 
 # No obstante, en caso de contener una clave repetida, tanto `del` 
 # como `pop()` eliminarán todas las claves coincidentes.
+
+
+## Anidamiento de diccionarios - Lista de diccionarios
+usuario_1 = { 'id': '0001', 'nombre': 'Sergio'}
+usuario_2 = { 'id': '0002', 'nombre': 'Yadira'}
+usuario_3 = { 'id': '0003', 'nombre': 'Fernando'}
+
+usuarios = [usuario_1, usuario_2, usuario_3] # Guardamos en la lista usuarios
+
+for usuario in usuarios:
+	print(usuario)
+
+
+usuarioss = []
+
+for usuarios_number in range(2):
+	new_usuario = { 'id': '0004', 'nombre': 'Isela'}
+	usuarios.append(new_usuario)
+	print(usuarios)
+
+print(f'total de usuarios creado: {len(usuarios)}')
+
+
+## Anidamiento de diccionadio dentro de un diccionario
+users = {
+	'administrador': { 'id': 'user-001',  'us': 'admin1', 'rango': 0},
+	'sysadmin': { 'id': 'user-002',  'us': 'sysadmin1', 'rango': 1},
+	'user_p0': { 'id': 'user-005',  'us': 'user0', 'rango': 2},
+	'user_p1': { 'id': 'user-007',  'us': 'user1', 'rango': 3},
+}
+
+for user_id, user_info in users.items():
+	print('---------------------------------')
+	credentials = print(f'Diccionario: {user_id.upper()}')
+	detalles = print(f"Usuario: {user_info['id']} - {user_info['us']}")
+	credentials = print(f'Diccionario Detalle: {user_info}')
+
