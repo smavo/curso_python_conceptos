@@ -60,9 +60,9 @@ print(f'La fruta seleccionada es {fruta2}')
 
 
 # Usando get() para acceder a los valores de un diccionario
-frutas3= {1:'Manzana', 2:'Mandarina', 3:'Fresa', 4:'Maracuya', 5:'Platano',}
+frutas3= {1:'Manzana', 2:'Mandarina', 3:'Fresa', 4:'Maracuya', 5:'Platano',6: 'Maracuya'}
 
-get_fruta = frutas3.get(6, 'No tiene valor')
+get_fruta = frutas3.get(7, 'No tiene valor')
 print(get_fruta)
 
 get_fruta = frutas3.get(4)
@@ -83,6 +83,7 @@ print(get_fruta)
 
 
 ## Recorrer un diccionario
+## Recorriendo todas las claves de un diccionario:
 # La forma más habitual de recorrer un diccionario es mediante 
 # la sentencia `for`. Al recorrer un diccionario, por defecto se 
 # iterará sobre sus claves:
@@ -97,11 +98,13 @@ for key in diccionario2.keys():
 	print(key) # Resultado: 1 2 3 4
 
 
+
+## Recorriendo todos los valores de un diccionario
 # Por lo tanto, para iterar accediendo a los valores, 
 # realizaremos lo siguiente:
 diccionario3 =  {1:'Sergio',  2:'Daniel',  3:'Fernando', 4:'Raul'}
-for key in diccionario3:
-	print(diccionario3[key]) 
+for valor in diccionario3:
+	print(diccionario3[valor]) 
 	# Resultado: 
 		# Sergio 
 		# Daniel 
@@ -118,6 +121,29 @@ for key, value in diccionario4.items():
 	# El valor de a is 1
 	# El valor de b is 2
 	# El valor de c is 3
+
+
+usuario_0 = { 'Sergio' : 'Python', 'Yadira' : 'Java', 'Fernando': 'PHP', 'Isela': 'PHP'}
+
+for clave, valor in usuario_0.items():
+	print(f'\nEl lenguaje favorito de {clave} es: {valor}')
+# Resultado:
+	# El lenguaje favorito de Sergio es: Python
+	# El lenguaje favorito de Yadira es: Java
+	# El lenguaje favorito de Fernando es: PHP
+
+
+# Mostrar valores sin duplicados- Extrae solo los valores unicos
+for usuario in set(usuario_0.values()):
+	print(usuario.title())
+
+
+
+# Recorriendo un diccionario en un orden particula:
+frutas0= {3:'Manzana', 4:'Mandarina', 1:'Fresa', 2:'Maracuya', 5:'Platano',}
+ 
+for id_, fruta in sorted(frutas0.items()):
+	print(f'{id_} - {fruta}')
 
 
 ## Borrar un elemento

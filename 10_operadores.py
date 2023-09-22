@@ -44,24 +44,24 @@ print(f'la division entera es: {division_entera}')
 *= (asignación con multiplicación)
 /= (asignación con división)
 """
-x = 8
+x = 8 
 print(x)
 
-x += 2  # Ahora x es igual a 10
-print(x)
+x += 2  # x = x + 2
+print(x) # Ahora x es igual a 10
 
 x = 8
-x -= 2  # Ahora x es igual a 6
-print(x)
+x -= 2  # x = x - 2
+print(x) # Ahora x es igual a 6
 
 y = 8
-y *= 2  # Ahora x es igual a 16
-print(y)
+y *= 2  # x = x * 2
+print(y) # Ahora x es igual a 16
 
 z = 8
-z /= 4  # Ahora x es igual a 2.0
-print(z)
-
+z /= 4  # x = x / 2
+print(z) # Ahora x es igual a 2.0
+ 
 
 
 # Operadores de comparación: 

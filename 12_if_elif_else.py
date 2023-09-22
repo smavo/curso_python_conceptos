@@ -1,12 +1,5 @@
 
-# Validaciones for + if
-autos = ['audi', 'ferrari', 'toyota']
 
-for auto in autos:
-    if auto == "audi":
-        print(auto.upper())
-    else:
-        print(auto.title())
 
 
 # Igualdad
@@ -94,3 +87,12 @@ for auto in autos:
         print(f'el auto {auto} no se encuentra seleccionado')
 
 
+
+# Validaciones for + if
+autos = ['audi', 'ferrari', 'toyota']
+
+for auto in autos:
+    if auto == "audi":
+        print(auto.upper())
+    else:
+        print(auto.title())
