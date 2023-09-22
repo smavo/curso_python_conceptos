@@ -3,11 +3,12 @@
 """
 Un diccionario es un conjunto de parejas **clave- valor** (key-value). 
 Es decir, se accede a cada elemento a partir de su clave. 
+El valor de una clave puede ser un número, una cadena, o incluso otro diccionario.
 Se definen de la siguiente manera:
 """
 estudiante = {
 	"nombre": "Sergio Villagomez Ortega",
-	"edad": 25,
+	"edad": 14,
 	"nota_media": 5.25,
 	"repetidor" : False
 }
@@ -26,15 +27,46 @@ nota_media = estudiante.get("nota_media") # devuelve el valor de 'nota_media'
 print(nota_media)
 
 
-# Insertar o actualizar un valor:
+# ------- Actualizar pares clave-valor: -------
 estudiante["edad"] = 25 # actualiza el valor de 'edad'
 estudiante["suspensos"] = 3 # inserta una nueva pareja clave - valor
+estudiante["Valor"] = True # Se esta agregando un nuevo par clave-valor
 print(estudiante)
 
 
-# insertar una pareja clave - valor o actualizar si ya existe:
+# Insertar un par clave-valor o actualizar si ya existe:
 estudiante.update({'aprobados':'8'})
 print(estudiante)
+
+
+# Iniciar un diccionario vacio
+frutas = {}
+
+frutas['id'] = 1
+frutas['nombre'] = 'Platano'
+print(frutas)
+
+frutas['id'] = 2
+frutas['nombre'] = 'Piña'
+print(frutas)
+
+
+
+# Como accedemos a un valor dentro del diccionario
+frutas2= {1:'Manzana', 2:'Fresa', 3:'Platano',}
+
+fruta2 = frutas2[3].title()
+print(f'La fruta seleccionada es {fruta2}')
+
+
+# Usando get() para acceder a los valores de un diccionario
+frutas3= {1:'Manzana', 2:'Mandarina', 3:'Fresa', 4:'Maracuya', 5:'Platano',}
+
+get_fruta = frutas3.get(6, 'No tiene valor')
+print(get_fruta)
+
+get_fruta = frutas3.get(4)
+print(get_fruta)
 
 
 # Algunos de los métodos más utilizados son los siguientes:
@@ -48,6 +80,7 @@ print(estudiante)
 | `clave in diccionario` | Devuelve True si el diccionario contiene la clave o False en caso contrario. |
 | `valor in diccionario.values()` | Devuelve True si el diccionario contiene el valor o False en caso contrario. |
 """
+
 
 ## Recorrer un diccionario
 # La forma más habitual de recorrer un diccionario es mediante 
