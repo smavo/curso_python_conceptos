@@ -1,5 +1,8 @@
-
-
+### ---------- Sentencia IF - ELSE ----------
+# Se evalúa la condición especificada en la sentencia `if` y en caso 
+# de cumplirse se ejecutará el bloque de código indentado (tabulado). 
+# En caso de que el resultado de la condición sea `False`, 
+# el bloque especificado no se ejecutará:
 
 
 # Igualdad
@@ -96,3 +99,34 @@ for auto in autos:
         print(auto.upper())
     else:
         print(auto.title())
+
+
+
+# Trabajando con la consola 
+message = input("Escribe tu Nombre: ")
+edad = input('Cuantos años tienes?: ')
+edad = int(edad)
+
+print(f'Tu nombre es: {message}')
+
+# if edad >= 18:
+#     print(f'Usted tiene {edad} y puede realizar esta operacion')
+# else:
+#     print(f'Usted tiene {edad} y no puede realizar esta operacion')
+
+resultado = (f'Usted tiene {edad} y puede realizar esta operacion') if edad >= 18 else (f'Usted tiene {edad} y no puede realizar esta operacion')
+print(resultado)
+
+
+
+entrada = input('Ingrese un número: ')
+entrada = int(entrada)
+
+# if entrada % 2 == 0:
+#     print(f'El numero {entrada} es par.')
+# else: 
+#     print(f'El numero {entrada} es impar.')
+
+rst = (f'El numero {entrada} es par.') if entrada % 2 == 0 else (f'El numero {entrada} es impar.')
+print(rst)
+
