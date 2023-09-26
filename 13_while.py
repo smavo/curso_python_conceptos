@@ -15,7 +15,7 @@ while entrada1 <= entrada2:
 
 # Mensaje por consola - 'Salir'
 prompt = '\nDime algo y lo imprimire'
-prompt += "\nIngrese 'salir' para finalizar el programa: "
+prompt += "\nIngrese 'quit' para finalizar el programa: "
 
 message = ''
 while message != 'quit':
@@ -23,4 +23,65 @@ while message != 'quit':
 
     if message != 'quit':
         print(message)
+
+
+
+# Uso de 'break' : Se usa para salir del ciclo inmediatamente sin ejecutar ningun
+# codigo restante en el ciclo, independientemente de los resultados de cualquier
+# prueba condicional.
+prompt = '\nEscribe el nombre de las cuidades que haz visitado: '
+prompt += "\nIngrese 'quit' para finalizar el programa: "
+
+while True:
+    ciudad = input(prompt)
+    
+    if ciudad == 'quit':
+        break
+    else: 
+        print(f'Si he ido a la cuidad de {ciudad.title()}')
+
+
+# Uso de 'continue' : En lugar de salir de un bucle por completo sin ejecutar el 
+# resto de su codigo, puede usar la instruccion 'continue' para volver al principio
+# del bucle en funcion del resultado de una prueba condicional
+numero_inicio = input('Ingrese un numero de inicio: ')
+numero_final = input('Ingrese un numero de Fin: ')
+numero_inicio = int(numero_inicio)
+numero_final = int(numero_final)
+
+while numero_inicio < numero_final:
+    numero_inicio +=1
+
+    if numero_inicio % 2 == 0:
+        continue
+
+    print(f'El numero impar es : {numero_inicio}')
+
+
+# Usar Bucle While con Listas y Diccionarios
+usuarios_no_confirmados = ['Sergio','Yadira','Fernando']
+usuarios_confirmados = []
+
+while usuarios_no_confirmados:
+    usuario_actual = usuarios_no_confirmados.pop()
+
+    print(f'Usuario Verificado: {usuario_actual.title()}')
+    usuarios_confirmados.append(usuario_actual)
+# Resultado:
+    # Usuario Verificado: Fernando
+    # Usuario Verificado: Yadira
+    # Usuario Verificado: Sergio
+
+
+# Eliminacion de todas las instancias de valores especificos 
+mascotas = ['perro', 'gato', 'pescado dorado', 'gato', 'conejo', 'gato']
+print(mascotas)
+
+while 'gato' in mascotas:
+    mascotas.remove('gato')
+
+print(mascotas)
+# Resultado: 
+    # ['perro', 'pescado dorado', 'conejo']
+
 
