@@ -159,6 +159,7 @@ for num in numeros:
     total += n
 
 
+
 #### Bucle FOR con ELSE
 # Python permite definir un bloque de código que se ejecutará una vez finalice la iteración por todos los elementos de una lista. Es importante mencionar que no se ejecutará si se ha finalizado mediante `break`.
 alumnos = ["Ane", "Mikel", "Unai", "Lorea"]
@@ -169,6 +170,7 @@ else:
     print("No quedan más alumnos.")
 
 
+
 #### La función range()
 # La función `range([start,]  stop  [,  step])` devuelve una secuencia de números. Es por ello que se utiliza de forma frecuente para iterar:
 for i in range(3):
@@ -176,6 +178,7 @@ for i in range(3):
 # 0
 # 1
 # 2
+
 
 
 # También podemos indicar el inicio, fin y step:
@@ -192,10 +195,12 @@ for i in range(1,  10,  2):
 # 1,  3,  5,  7,  9,
 
 
+
 # Para iterar por una lista utilizando el índice, basta con combinarlo con la función `len()`:
     alumnos = ["Ane", "Mikel", "Unai", "Lorea"]
     for i in range(len(alumnos)):
     	print(alumnos[i])
+
 
 
 
@@ -211,6 +216,7 @@ for numero in numeros:
     print(numero)
 
 
+
 # ------- Instrucción continue: -------
 # Se utiliza dentro de bucles para saltar la iteración actual y continuar 
 # con la siguiente si se cumple una condición.
@@ -219,6 +225,7 @@ for i in range(1, 6):
         print("Saltando el número 3")
         continue
     print(f"Número: {i}")
+
 
 
 # ------- Estructura de control try-except: -------
