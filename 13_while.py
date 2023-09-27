@@ -13,6 +13,7 @@ while entrada1 <= entrada2:
     entrada1 += 1 # entrada1 = entrada1 + 1
 
 
+
 # Mensaje por consola - 'Salir'
 prompt = '\nDime algo y lo imprimire'
 prompt += "\nIngrese 'quit' para finalizar el programa: "
@@ -41,6 +42,7 @@ while True:
         print(f'Si he ido a la cuidad de {ciudad.title()}')
 
 
+
 # Uso de 'continue' : En lugar de salir de un bucle por completo sin ejecutar el 
 # resto de su codigo, puede usar la instruccion 'continue' para volver al principio
 # del bucle en funcion del resultado de una prueba condicional
@@ -58,6 +60,7 @@ while numero_inicio < numero_final:
     print(f'El numero impar es : {numero_inicio}')
 
 
+
 # Usar Bucle While con Listas y Diccionarios
 usuarios_no_confirmados = ['Sergio','Yadira','Fernando']
 usuarios_confirmados = []
@@ -73,6 +76,7 @@ while usuarios_no_confirmados:
     # Usuario Verificado: Sergio
 
 
+
 # Eliminacion de todas las instancias de valores especificos 
 mascotas = ['perro', 'gato', 'pescado dorado', 'gato', 'conejo', 'gato']
 print(mascotas)
@@ -84,4 +88,37 @@ print(mascotas)
 # Resultado: 
     # ['perro', 'pescado dorado', 'conejo']
 
+
+
+# Llenar un diccionario con entrada de usuario
+# Registro de encuestas de mascotas preferidas de los usuarios
+responses = {}
+sondeo_activo = True
+
+while sondeo_activo:
+    nombre = input('Podria ingresar su nombre: ')
+    response = input('Cual es el nombre de tu mascota preferida? ')
+
+    responses[nombre] = response
+    
+    repetir = input('Quieres continua - Responder (si/no) ')
+    if repetir == 'no':
+        sondeo_activo = False
+
+print('Resultados: ')
+
+for nombre, response in responses.items():
+    print("El usuario " + nombre + " tiene como mascota a: " + response + ".")
+
+
+# Algunos ejemplos adicionales
+# Tabla de Multiplicar 
+n_inicio = int(input('Ingrese el numero de inicio: ')) 
+n_final = int(input('Ingrese el numero Final: ')) 
+table = int(input('Ingrese la tabla que desea ver:'))
+
+while n_inicio < n_final:
+    rst1 = table * n_inicio
+    print(f'El resultado de {table} * {n_inicio} = {rst1}')
+    n_inicio += 1
 
