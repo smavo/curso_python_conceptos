@@ -31,11 +31,17 @@ print(valores[:4])
 
 
 # Una acción típica de las tuplas es "desempaquetar" (unpack) sus valores, es decir, asignarlos a variables directamente:
-
 tupla = (1, "Hola", 2.5) # Creamos la tupla
-    
 var1, var2, var3 = tupla # Hacemos el unpack
-
 print(var1)      # 1
 print(var2)      # 'Hola' 
 print(var3)      # 2.5
+
+
+
+# En que casos Usar una tupla en vez de una lista
+# cuando se require mejor rendimiento ya que es mas rapido manipular 
+# una tupla.
+
+# Cuando los valores son permanentes durante la vida del programa, asi 
+# protege contra la modificacion accidental.

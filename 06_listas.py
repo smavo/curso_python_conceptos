@@ -1,5 +1,5 @@
 
-# Listas
+# Listas [Python] en otros lenguajes lo conocen como array [No son lo mismo]
 # Es una colección de elementos en un orden particular. 
 # Son colecciones ordenadas y modificables de elementos. 
 # Los elementos pueden ser de diferentes tipos
@@ -11,13 +11,13 @@ print(autos)
 """
 Python considera que el primer elemento de una lista esta en la posición 0, no en la posición 1.
 """ 
-print(autos[0])  # .upper() = Mayuscula
+print(autos[0].upper())  # .upper() = Mayuscula
 print(autos[2]) # Accediendo al 3 elemento
 print(autos[-1]) # Accediendo al ultimo elemento
 print(autos[-2]) # Accediendo al penultimo elemento
 print(autos[:2]) # Accediendo hasta la tercera posicion
 print(autos[1:]) # Accediendo desde la segunda posicion hacia adelante
-
+print(autos[::-1]) # Lista invertida
 
 # Uso de valores individuales de la lista
 print(f'La marca que me gusta mas es {autos[0].title()}')
@@ -153,3 +153,22 @@ print(numeros)
 
 numeros_ppares = numeros_pares
 print(numeros_ppares)
+
+
+
+
+# Motificar listas 
+textos = ['texto1', 'texto2', 'texto3', 'texto4', 'teexto5', 'texto6']
+print(textos)
+
+textos[0:3] = [1,2,3]
+print(textos) # [1, 2, 3, 'texto4', 'teexto5', 'texto6']
+
+textos[0:3] = [1,2]
+print(textos) # [1, 2, 'texto4', 'teexto5', 'texto6']
+
+textos[2:2] = [3,4,5]
+print(textos) # [1, 2, 3, 4, 5, 'texto4', 'teexto5', 'texto6']
+
+textos[5:8] = []
+print(textos) # [1, 2, 3, 4, 5]
