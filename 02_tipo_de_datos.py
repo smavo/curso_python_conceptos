@@ -65,5 +65,10 @@ cjtos = {1, 2, 3}
 ntp = None
 print(ntp)
 
+# A tener en cuenta:
+    # None no es lo mismo que 'False'
+    # None no es 0
+    # None no es un string vacio
+    # Comparar 'None' con cualquier cosa devuelve 'False' excepto con 'None'
 
 # Bytes y bytearray: Se utilizan para representar datos binarios. Son útiles para trabajar con archivos y protocolos de red.
