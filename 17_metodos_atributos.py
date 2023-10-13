@@ -124,3 +124,168 @@ toyota.consumo_medio()
 bmw = Coche(250, 10, 'bmw')
 bmw.velocidad_maxima()
 bmw.consumo_medio()
+
+
+# ------------------------------------------------------------------------------
+
+
+class Vehiculo():
+    """Esta clase representa un coche."""
+    
+    def __init__(self, modelo, potencia, consumo):
+        """Inicializa los atributos de instancia.
+        
+        Argumentos posicionales:
+        modelo -- string que representa el modelo del coche
+        potencia -- int que representa la potencia en cv
+        conumo -- int que representa el consumo en l/100km
+        """
+        self.modelo = modelo
+        self.potencia = potencia
+        self.consumo = consumo
+        
+    def especificaciones(self):
+        """Muestra las especicificaciones del coche."""
+        print("-----------------------------------")
+        print("Modelo:", self.modelo,
+             "\nPotencia: {} cv".format(self.potencia),
+             "\nConsumo: {} l/100km".format(self.consumo))
+        
+
+# help(Vehiculo)
+
+mercedes = Vehiculo("mercedes c200", 180, 7)
+mercedes.especificaciones()
+
+
+### 2. Atributos con valores por defecto
+class Vehiculo1():
+    """Esta clase representa un coche."""
+    
+    def __init__(self, modelo, potencia, consumo):
+        """Inicializa los atributos de instancia.
+        
+        Argumentos posicionales:
+        modelo -- string que representa el modelo del coche
+        potencia -- int que representa la potencia en cv
+        conumo -- int que representa el consumo en l/100km
+        """
+        self.modelo = modelo
+        self.potencia = potencia
+        self.consumo = consumo
+        self.km_actuales = 0
+        
+    def especificaciones(self):
+        """Muestra las especicificaciones del coche."""
+        print("-----------------------------------")
+        print("Modelo:", self.modelo,
+             "\nPotencia: {} cv".format(self.potencia),
+             "\nConsumo: {} l/100km".format(self.consumo),
+             "\nKilometros actuales:", self.km_actuales)
+        print("-----------------------------------")
+
+
+camaro = Vehiculo1("camaro c200", 180, 7)
+camaro.especificaciones()
+
+
+### 3. Modificando los valores de los atributos de un objeto
+# La manera más sencilla de modificar el valor de un atributo de un objeto es 
+# utilizando la sintaxis: 
+# <objeto>.<atributo> = <nuevo_valor>
+
+camaro.km_actuales = -200
+camaro.especificaciones()
+
+
+# Por otro lado, existe una práctica mejor a la hora de modificar los atributos de la 
+# clase que consiste en hacerlo a través de un método especialmente creado para ello.
+
+# Esto nos permite realizar operaciones adicionales dentro de nuestro objeto siempre 
+# que se recibe un nuevo valor de un atributo.
+
+class Vehiculo2():
+    """Esta clase representa un Vehiculo2."""
+    
+    def __init__(self, modelo, potencia, consumo):
+        """Inicializa los atributos de instancia.
+        
+        Argumentos posicionales:
+        modelo -- string que representa el modelo del coche
+        potencia -- int que representa la potencia en cv
+        conumo -- int que representa el consumo en l/100km
+        """
+        self._modelo = modelo
+        self._potencia = potencia
+        self._consumo = consumo
+        self._km_actuales = 0
+        
+    def especificaciones(self):
+        """Muestra las especicificaciones del coche."""
+        print("-----------------------------------")
+        print("Modelo:", self._modelo,
+             "\nPotencia: {} cv".format(self._potencia),
+             "\nConsumo: {} l/100km".format(self._consumo),
+             "\nKilometros actuales:", self._km_actuales)
+        
+    def actualizar_kilometros(self, kilometros):
+        print("-----------------------------------")
+        """Actualiza los kilometros del coche."""
+        if kilometros > self._km_actuales:
+            self._km_actuales = kilometros
+        else:
+            print("ERROR: No se puede establecer un numero de kilometros inferior al actual")
+
+ferrari = Vehiculo2("ferrari c200", 180, 7)
+ferrari.especificaciones()
+
+ferrari.actualizar_kilometros(1000)
+ferrari.especificaciones()
+
+
+
+### 4. Extendiendo la funcionalidad de nuestra clase
+class Vehiculo3():
+    """Esta clase representa un coche."""
+    
+    def __init__(self, modelo, potencia, consumo):
+        """Inicializa los atributos de instancia.
+        
+        Argumentos posicionales:
+        modelo -- string que representa el modelo del coche
+        potencia -- int que representa la potencia en cv
+        conumo -- int que representa el consumo en l/100km
+        """
+        self._modelo = modelo
+        self._potencia = potencia
+        self._consumo = consumo
+        self._km_actuales = 0
+        
+    def especificaciones(self):
+        """Muestra las especicificaciones del coche."""
+        print("Modelo:", self._modelo,
+             "\nPotencia: {} cv".format(self._potencia),
+             "\nConsumo: {} l/100km".format(self._consumo),
+             "\nKilometros actuales:", self._km_actuales)
+        
+    def actualizar_kilometros(self, kilometros):
+        """Actualiza los kilometros del coche."""
+        if kilometros > self._km_actuales:
+            self._km_actuales = kilometros
+        else:
+            print("ERROR: No se puede establecer un numero de kilometros inferior al actual")
+            
+    def consumo_total(self):
+        """Muestra el consumo total del coche desde el kilometro 0."""
+        consumo_total = (self._km_actuales / 100) * self._consumo
+        print("El consumo total es de {} litros".format(consumo_total))
+
+
+mercedes = Vehiculo3("mercedes c200", 180, 7)
+mercedes.consumo_total()
+mercedes.especificaciones()
+mercedes.actualizar_kilometros(100)
+mercedes.consumo_total()
+
+mercedes.actualizar_kilometros(250)
+mercedes.consumo_total()
